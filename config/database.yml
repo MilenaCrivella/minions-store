@@ -22,8 +22,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: minions-store_development
+  adapter: postgresql
+  database: dd4lbl235ue400
+  host: ec2-54-243-223-245.compute-1.amazonaws.com
+  port: 5432
+  username: pqfkbhocnzshyh
+  password: b8ec0f4cf64c885d5143df6d0eb149e1c0294185460d8feb8fe05667275cec3f
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

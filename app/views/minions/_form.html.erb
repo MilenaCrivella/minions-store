@@ -1,0 +1,27 @@
+<%= form_with(model: minion, local: true) do |form| %>
+  <% if minion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(minion.errors.count, "error") %> prohibited this minion from being saved:</h2>
+
+      <ul>
+      <% minion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :minion_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id, id: :minion_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
