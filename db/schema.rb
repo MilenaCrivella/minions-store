@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20190227184555) do
 
   create_table "minions", force: :cascade do |t|
     t.string "nome"
-    t.string "reservado"
+    t.boolean "reservado"
+    t.string "descricao"
+    t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
