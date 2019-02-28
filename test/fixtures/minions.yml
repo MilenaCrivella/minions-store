@@ -2,8 +2,8 @@
 
 one:
   nome: MyString
-  id: MyString
+  reservado: MyString
 
 two:
   nome: MyString
-  id: MyString
+  reservado: MyString

@@ -23,11 +23,11 @@ default: &default
 
 development:
   adapter: postgresql
-  database: dd4lbl235ue400
-  host: ec2-54-243-223-245.compute-1.amazonaws.com
+  database: dbj5romgq8qr9s
+  host: ec2-54-235-134-25.compute-1.amazonaws.com
   port: 5432
-  username: pqfkbhocnzshyh
-  password: b8ec0f4cf64c885d5143df6d0eb149e1c0294185460d8feb8fe05667275cec3f
+  username: xvdfnnljegpqcc
+  password: 22f67578c960333f885719917f77174febfb38f8b4516e0423b886af2c8573e8
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -83,7 +83,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: minions-store_production
-  username: minions-store
-  password: <%= ENV['MINIONS-STORE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: dbj5romgq8qr9s
+  host: ec2-54-235-134-25.compute-1.amazonaws.com
+  port: 5432
+  username: xvdfnnljegpqcc
+  password: 22f67578c960333f885719917f77174febfb38f8b4516e0423b886af2c8573e8
