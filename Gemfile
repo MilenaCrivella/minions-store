@@ -51,3 +51,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.12.2'
 
 gem 'devise'
+gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
+gem 'listen'
