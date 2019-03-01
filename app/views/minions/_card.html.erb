@@ -1,11 +1,11 @@
 <div class="row">
   <% minions.each do |minion| %>
     <div class="col card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="<%= minion.img %>" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><%= minion.nome %></h5>
         <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">Reservar</a>
+        <%= button_to "Reservado", form_class: "btn btn-primary" %>
       </div>
     </div>
   <% end %>

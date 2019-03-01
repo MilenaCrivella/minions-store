@@ -1,9 +1,32 @@
-<nav class="navbar navbar-expand-sm bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" alt="Logo" style="width:5vw;">
-    </a>
+<nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">
+            <img src="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" alt="Logo" style="width:5vw;">
+        </a>
+        <ul class="nav navbar-nav navbar-right"> 
+        <% if user_signed_in? %>
+          <button class="btn btn-primary">
+              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          </button>
+        <% else %>
+          <form class="form-inline" action="/action_page.php">
+            <button class="btn btn-primary">
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            </button>
+            <button class="btn btn-primary">
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+            </button>
+          </form>
+        <% end %>
+        </ul>
 </nav>
 <div class="container">
-    <h1 class="text-center">Minions<br>Store</h1>
+    <h1 class="text-center">Minions Store</h1>
     <%= render partial: "minions/card", locals: { minions: @minions } %>
 </div>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
