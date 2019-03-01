@@ -3,11 +3,7 @@
 one:
   nome: MyString
   reservado: MyString
-  img: MyString
-  descricao: MyText
 
 two:
   nome: MyString
   reservado: MyString
-  img: MyString
-  descricao: MyText

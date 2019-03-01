@@ -45,6 +45,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+<<<<<<< HEAD
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.delivery_method = :smtp
@@ -63,6 +64,8 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   # Send email in development mode.
   config.action_mailer.perform_deliveries = true
+=======
+>>>>>>> parent of 53daf73... Autenticação
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

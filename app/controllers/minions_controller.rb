@@ -68,6 +68,6 @@ class MinionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def minion_params
-      params.require(:minion).permit(:nome, :reservado, :img, :descricao)
+      params.require(:minion).permit(:nome, :reservado)
     end
 end
