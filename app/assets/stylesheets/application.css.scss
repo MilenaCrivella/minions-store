@@ -7,6 +7,7 @@
 
 body{
     background-color: black;
+    text-align: center;
 }
 h1{
     color: #ffffff;
@@ -15,6 +16,16 @@ h1{
     font-size: 6em;
     font-weight: 100;
 }
+h2{
+    color: #ffffff;
+    font-family: 'Nova Flat', cursive;
+    font-size: 4em;
+    font-weight: 100;
+}
+label{
+    color: #ffffff;
+    font-size: 1.5em;
+}
 nav{
     background-color: #fff;
     border-bottom: 4px #ffdb58 solid;
@@ -22,9 +33,31 @@ nav{
 p{
     color: #000;
 }
-.btn.btn-primary{
+.btn.btn-primary, input[type=submit]{
     background-color: #ffdb58;
     border: none;
     color: #000;
     font-weight: bold;
+    margin: 5px;
+}
+
+.page-footer.font-small{
+    background-color: #ffdb58;
+}
+
+@media (max-width: 575.98px) {  }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .card-img-top{
+    }
 }

@@ -20,13 +20,15 @@
         </ul>
 </nav>
 <div class="container">
+    <%= button_to 'Press me', button_path, method: :get%>
     <h1 class="text-center">Minions Store</h1>
     <%= render partial: "minions/card", locals: { minions: @minions } %>
 </div>
-
+<%= render partial: "minions/footer", locals: { minions: @minions } %>
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+

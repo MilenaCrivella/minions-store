@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :minions
   get 'minions/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'minions#index'
-  resources :minions
+
+  get '/button', to: 'minions#button', as: :button
+  post '/button', to: 'minions#button'
+
+  resources :reservas_mailer
+  get '/reservas_email', to: 'reservas_mailer#reservas_email'
 end

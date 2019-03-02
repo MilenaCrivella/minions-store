@@ -43,6 +43,7 @@ class MinionsController < ApplicationController
     respond_to do |format|
       if @minion.update(minion_params)
         format.html { redirect_to @minion, notice: 'Minion was successfully updated.' }
+        ReservasMailer.reservas_email().deliver_now
         format.json { render :show, status: :ok, location: @minion }
       else
         format.html { render :edit }
@@ -59,6 +60,10 @@ class MinionsController < ApplicationController
       format.html { redirect_to minions_url, notice: 'Minion was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def button
+    ReservasMailer.reservas_email().deliver_now
   end
 
   private

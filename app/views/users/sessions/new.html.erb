@@ -1,6 +1,6 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {:class => "form-group row"}) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, class: "col-sm-2 col-form-label" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -17,8 +17,9 @@
   <% end %>
   
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Acessar", class:"btn btn-primary" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+
