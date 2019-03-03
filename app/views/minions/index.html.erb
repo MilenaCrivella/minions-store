@@ -19,8 +19,7 @@
         <% end %>
         </ul>
 </nav>
-<div class="container">
-    <%= button_to 'Press me', button_path, method: :get%>
+<div class="container ">
     <h1 class="text-center">Minions Store</h1>
     <%= render partial: "minions/card", locals: { minions: @minions } %>
 </div>

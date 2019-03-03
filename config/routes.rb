@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get 'minions/index'
   root 'minions#index'
 
-  get '/button', to: 'minions#button', as: :button
-  post '/button', to: 'minions#button'
+  post 'minions/button'
 
   resources :reservas_mailer
   get '/reservas_email', to: 'reservas_mailer#reservas_email'

@@ -62,7 +62,7 @@ class MinionsController < ApplicationController
   end
 
   def button
-    ReservasMailer.deliver_now
+    ReservasMailer.reservas_mailer.deliver
   end
 
   private

@@ -1,5 +1,6 @@
 class ReservasMailer < ApplicationMailer
     default from: 'minionsstore7@gmail.com'
-    layout 'reservas_mailer'
-    mail(to:"milenaverissimo@gmail.com", subject: "Reserva confirmada") 
+    def reservas_mailer()
+        mail(to: "milenaverissimo@gmail.com",subject:'Confirmação de reserva de minion')
+    end
 end
