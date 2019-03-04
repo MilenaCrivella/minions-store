@@ -23,11 +23,11 @@ default: &default
 
 development:
   adapter: postgresql
-  database: dbj5romgq8qr9s
-  host: ec2-54-235-134-25.compute-1.amazonaws.com
+  database: d88m0n1ckgr67u
+  host: ec2-107-20-167-11.compute-1.amazonaws.com
   port: 5432
-  username: xvdfnnljegpqcc
-  password: 22f67578c960333f885719917f77174febfb38f8b4516e0423b886af2c8573e8
+  username: vsroievyvogdyt
+  password: a6f9b6756d5199ac195f395c78f4006ff002e56a080038591b0f443d9c3203e7
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,8 +84,8 @@ test:
 #
 production:
   adapter: postgresql
-  database: dbj5romgq8qr9s
-  host: ec2-54-235-134-25.compute-1.amazonaws.com
+  database: d88m0n1ckgr67u
+  host: ec2-107-20-167-11.compute-1.amazonaws.com
   port: 5432
-  username: xvdfnnljegpqcc
-  password: 22f67578c960333f885719917f77174febfb38f8b4516e0423b886af2c8573e8
+  username: vsroievyvogdyt
+  password: a6f9b6756d5199ac195f395c78f4006ff002e56a080038591b0f443d9c3203e7
