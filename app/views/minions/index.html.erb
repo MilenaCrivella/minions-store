@@ -1,6 +1,6 @@
 <nav class="navbar navbar-inverse">
         <a class="navbar-brand" href="#">
-            <img src="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" alt="Logo" style="width:5vw;">
+            <img id="logo" src="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" alt="Logo">
         </a>
         <ul class="nav navbar-nav navbar-right"> 
         <% if user_signed_in? %>
@@ -19,7 +19,7 @@
         <% end %>
         </ul>
 </nav>
-<div class="container ">
+<div class="container main">
     <h1 class="text-center">Minions Store</h1>
     <%= render partial: "minions/card", locals: { minions: @minions } %>
 </div>

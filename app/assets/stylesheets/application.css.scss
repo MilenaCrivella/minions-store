@@ -48,18 +48,56 @@ p{
     margin: 0;
     width: auto;
 }
+.main{
+    min-height: 90vh;
+}
 @media (max-width: 575.98px) {  }
-   
+    #logo{
+        width: 20vw;
+    }
+    .btn.btn-primary, input[type=submit]{
+        width: 20vw;
+    }
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
+    #logo{
+        width: 20vw;
+    }
+    .btn.btn-primary, input[type=submit]{
+        width: 20vw;
+    }
  }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {  }
+@media (min-width: 768px) and (max-width: 991.98px) {  
+    #logo{
+        width: 20vw;
+    }
+    .btn.btn-primary, input[type=submit]{
+        width: 10vw;
+    }
+}
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #logo{
+        width: 5vw;
+    }
+    .btn.btn-primary, input[type=submit]{
+        width: 10vw;
+    }
+    .row{
+        margin: 0;
+        max-width: 40vw;
+    }
+  }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
+    #logo{
+        width: 5vw;
+    }
+    .btn.btn-primary, input[type=submit]{
+        width: 10vw;
+    }
 }
