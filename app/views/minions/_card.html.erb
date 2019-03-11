@@ -8,10 +8,10 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title"><%= minion.nome %></h5>
+            <h5 class="card-title" id="<%= minion.nome %>"><%= minion.nome %></h5>
             <p class="card-text"><%= minion.descricao %></p>
             <% if user_signed_in? %>
-              <%= button_to 'Reservar', { action: "button"}%>
+              <a class="button btn btn-primary" href="/reserva" id="<%= minion.reservado %>">Reservar</a>
             <% else %>
               <p class="card-text"><small class="text-muted">Faça login na plataforma para reservar o seu minion</small></p>
             <% end %>

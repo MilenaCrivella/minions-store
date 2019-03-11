@@ -1,0 +1,15 @@
+<nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" alt="Logo">
+        </a>
+        <ul class="nav navbar-nav navbar-right"> 
+        <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-primary") %>
+        <% else %>
+          <form class="form-inline" action="/action_page.php">
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link btn btn-primary'  %>
+            <%= link_to "Cadastro", new_user_registration_path, :class => 'navbar-link btn btn-primary'  %>
+          </form>
+        <% end %>
+        </ul>
+</nav>

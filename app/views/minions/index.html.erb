@@ -1,26 +1,6 @@
-<nav class="navbar navbar-inverse">
-        <a class="navbar-brand" href="#">
-            <img id="logo" src="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" alt="Logo">
-        </a>
-        <ul class="nav navbar-nav navbar-right"> 
-        <% if user_signed_in? %>
-          <button class="btn btn-primary">
-              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-          </button>
-        <% else %>
-          <form class="form-inline" action="/action_page.php">
-            <button class="btn btn-primary">
-              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-            </button>
-            <button class="btn btn-primary">
-              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-            </button>
-          </form>
-        <% end %>
-        </ul>
-</nav>
+<%= render partial: "minions/header", locals: { minions: @minions } %>
 <div class="container main">
-    <h1 class="text-center">Minions Store</h1>
+    <h1 class="text-center title">Minions Store</h1>
     <%= render partial: "minions/card", locals: { minions: @minions } %>
 </div>
 <%= render partial: "minions/footer", locals: { minions: @minions } %>

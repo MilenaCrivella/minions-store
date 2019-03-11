@@ -1,0 +1,27 @@
+<%= render partial: "minions/header", locals: { minions: @minions } %>
+<div class="form">
+    <%= form_tag '/button' do%>
+        <div class="form-group">
+            <label class="form_text">Nome: </label>
+            <%= text_field_tag 'nome', ''%>
+        </div>
+        <div class="form-group">
+            <label class="form_text">Email: </label>
+            <%= text_field_tag 'email', ''%>
+        </div>
+        <div class="form-group">
+            <label class="form_text">Minion: </label>
+            <%= text_field_tag 'minion', ''%>
+        </div>
+        <div class="form-group">
+            <label class="form_text">Endereço: </label>
+            <%= text_field_tag 'endereço', ''%>
+        </div>
+        <div class="form-group">
+            <label class="form_text">Telefone: </label>
+            <%= text_field_tag 'telefone', ''%>
+        </div>
+        <%= submit_tag "submit",:value => "submit"%>
+    <%end%>
+</div>
+<%= render partial: "minions/footer", locals: { minions: @minions } %>

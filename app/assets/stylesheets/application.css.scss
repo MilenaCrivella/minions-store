@@ -51,20 +51,71 @@ p{
 .main{
     min-height: 90vh;
 }
-@media (max-width: 575.98px) {  }
+.container.main.button{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+    align-content: center;
+    margin-top: 5vh;
+}
+.card.button{
+    padding: 2.5%;
+}
+
+.form{
+    height: 100vh;
+    text-align: center;
+    margin: 5% 0;
+}
+@media (max-width: 575.98px) { 
     #logo{
         width: 20vw;
     }
     .btn.btn-primary, input[type=submit]{
-        width: 20vw;
+        width: auto;
+        font-size: 3em;
     }
+    .card{
+        max-width: 100%;
+    }
+    input[type=text]{
+        font-size: 3em;
+    }
+    .form_text{
+        font-size: 3em;
+    }
+    .form-group{
+        margin-top: 5%;
+    }
+    input[type=text]{
+        border-radius: 25px;
+    }
+ }
+    
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
     #logo{
         width: 20vw;
     }
     .btn.btn-primary, input[type=submit]{
-        width: 20vw;
+        width: auto;
+    }
+    .card{
+        max-width: 100%!important;
+    }
+    input[type=text]{
+        font-size: 3em;
+    }
+    .form_text{
+        font-size: 3em;
+    }
+    .form-group{
+        margin-top: 5%;
+    }
+    input[type=text]{
+        border-radius: 25px;
     }
  }
 
@@ -74,21 +125,56 @@ p{
         width: 20vw;
     }
     .btn.btn-primary, input[type=submit]{
-        width: 10vw;
+        width: auto;
+    }
+    .card{
+        max-width: 100%!important;
+    }
+    .title{
+        font-size: 10em;
+        margin: 3vh 0;
+    }
+    p{
+        font-size: 1.6em;
+    }
+    h5{
+        font-size: 3em;
+    }
+    input[type=text]{
+        font-size: 1.5em;
+    }
+    .form_text{
+        font-size: 2em;
+    }
+    input[type=text]{
+        border-radius: 20px;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
     #logo{
-        width: 5vw;
+        height: 80%;
     }
-    .btn.btn-primary, input[type=submit]{
-        width: 10vw;
+    .card{
+        max-width: 40vw;
     }
     .row{
-        margin: 0;
-        max-width: 40vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    p{
+        font-size: 1.6em;
+    }
+    h5{
+        font-size: 3em;
+    }
+    .form_text{
+        font-size: 1.5em;
+    }
+    input[type=text]{
+        font-size: 1.5em;
+        border-radius: 15px;
     }
   }
 
@@ -98,6 +184,17 @@ p{
         width: 5vw;
     }
     .btn.btn-primary, input[type=submit]{
-        width: 10vw;
+        width: auto;
+        font-size: 1.2em;
+    }
+    .card{
+        max-width: 540px;
+    }
+    .form_text{
+        font-size: 1.5em;
+    }
+    input[type=text]{
+        font-size: 1.5em;
+        border-radius: 15px;
     }
 }

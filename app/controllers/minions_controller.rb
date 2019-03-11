@@ -1,5 +1,5 @@
 class MinionsController < ApplicationController
-  before_action :set_minion, only: [:show, :edit, :update, :destroy]
+  before_action :set_minion, only: [:show, :edit, :update, :destroy, :authenticate_user!]
 
   # GET /minions
   # GET /minions.json
@@ -61,8 +61,8 @@ class MinionsController < ApplicationController
     end
   end
 
-  def button
-    ReservasMailer.reservas_mailer.deliver
+  def button 
+    ReservasMailer.reservas_mailer(current_user, params[:nome], params[:email], params[:minion], params[:endereço], params[:telefone]).deliver!
   end
 
   private

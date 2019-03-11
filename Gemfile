@@ -51,3 +51,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.12.2'
 
 gem 'devise'
+gem 'jquery-rails'
+gem 'listen'
+gem 'formtastic', '~> 3.0'
+

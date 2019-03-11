@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Minions Store</title>
+    <%= csrf_meta_tags %>
+    <link rel='shortcut icon' href="https://www.thetrailerbox.com/images/Convert/2Minions-Black.png" /> 
+    </head>
+
+    <body>
+    <%= render partial: "minions/header", locals: { minions: @minions } %>
+    <div class="container main button">
+        <div class=" card button">
+            <h5 class="card-title">O seu minion foi reservado!</h5>
+            <a class="btn btn-primary" href="http://localhost:3000/minions">Voltar</a>
+        </div>
+    </div>
+    <%= render partial: "minions/footer", locals: { minions: @minions } %>
+    </body>
+</html>
